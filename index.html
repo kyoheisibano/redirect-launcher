@@ -3,30 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Redirect Launcher</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      text-align: center;
-      margin-top: 30vh;
-    }
-    button {
-      padding: 1em 2em;
-      font-size: 1.2em;
-      border-radius: 0.5em;
-      border: none;
-      background: #4CAF50;
-      color: white;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-  <h1>Prime Video期限カレンダー</h1>
-  <p>以下のボタンを押すと、今日から29日後のページに移動します。</p>
-  <button onclick="redirect()">アクセスする</button>
-
   <script>
-    function redirect() {
+    window.onload = function() {
       const d = new Date();
       d.setDate(d.getDate() + 29);
       const yyyy = d.getFullYear();
@@ -34,7 +12,7 @@
       const dd = d.getDate();
       const url = `https://animephilia.net/amazon-prime-video-expiring-calendar/week/${yyyy}/${mm}/${dd}/`;
       window.location.href = url;
-    }
+    };
   </script>
-</body>
+</head>
 </html>
