@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Redirect Launcher</title>
+  <script>
+    window.onload = function() {
+      const d = new Date();
+      d.setDate(d.getDate() + 29);
+      const yyyy = d.getFullYear();
+      const mm = d.getMonth() + 1;
+      const dd = d.getDate();
+      const url = `https://animephilia.net/amazon-prime-video-expiring-calendar/week/${yyyy}/${mm}/${dd}/`;
+      window.location.href = url;
+    };
+  </script>
+</head>
+<body>
+  <p>リダイレクト中です…</p>
+</body>
+</html>
